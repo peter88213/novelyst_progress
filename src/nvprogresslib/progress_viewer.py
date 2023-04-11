@@ -26,6 +26,7 @@ class ProgressViewer(tk.Toplevel):
 
         #--- Tree for log view.
         columns = (
+            'date',
             'wordCount',
             'wordCountDelta',
             'totalWordCount',
@@ -36,11 +37,17 @@ class ProgressViewer(tk.Toplevel):
         self.tree.configure(yscrollcommand=scrollY.set)
         scrollY.pack(side=tk.RIGHT, fill=tk.Y)
         self.tree.pack(fill=tk.BOTH, expand=True)
-        self.tree.heading('#0', text=_('Date'))
+        self.tree.heading('date', text=_('Date'))
         self.tree.heading('wordCount', text=_('Word count'))
         self.tree.heading('wordCountDelta', text=_('Daily'))
         self.tree.heading('totalWordCount', text=_('With unused'))
         self.tree.heading('totalWordCountDelta', text=_('Daily'))
+        self.tree.column('#0', width=0)
+        self.tree.column('date', anchor=tk.CENTER, width=100)
+        self.tree.column('wordCount', anchor=tk.CENTER, width=100)
+        self.tree.column('wordCountDelta', anchor=tk.CENTER, width=100)
+        self.tree.column('totalWordCount', anchor=tk.CENTER, width=100)
+        self.tree.column('totalWordCountDelta', anchor=tk.CENTER, width=100)
 
         self.tree.tag_configure('positive', foreground='black')
         self.tree.tag_configure('negative', foreground='red')
@@ -77,13 +84,17 @@ class ProgressViewer(tk.Toplevel):
             nodeTags = ()
             countInt = int(wcLog[wc][0])
             countDiffInt = countInt - lastCount
+            totalCountInt = int(wcLog[wc][1])
+            totalCountDiffInt = totalCountInt - lastTotalCount
+            if countDiffInt == 0 and totalCountDiffInt == 0:
+                continue
+
             if countDiffInt > 0:
                 nodeTags = ('positive')
             else:
                 nodeTags = ('negative')
-            totalCountInt = int(wcLog[wc][1])
-            totalCountDiffInt = totalCountInt - lastTotalCount
             columns = [
+                wc,
                 str(wcLog[wc][0]),
                 str(countDiffInt),
                 str(wcLog[wc][1]),
@@ -91,4 +102,4 @@ class ProgressViewer(tk.Toplevel):
                 ]
             lastCount = countInt
             lastTotalCount = totalCountInt
-            self.tree.insert('', 'end', iid=wc, text=wc, values=columns, tags=nodeTags, open=True)
+            self.tree.insert('', 'end', iid=wc, values=columns, tags=nodeTags, open=True)

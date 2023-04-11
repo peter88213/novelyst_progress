@@ -14,7 +14,7 @@ from nvprogresslib.nvprogress_globals import *
 from nvprogresslib.progress_viewer import ProgressViewer
 
 SETTINGS = dict(
-    window_geometry='600x800',
+    window_geometry='510x440',
 )
 OPTIONS = {}
 
