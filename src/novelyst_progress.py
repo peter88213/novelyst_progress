@@ -65,17 +65,9 @@ class Plugin:
         self._ui.toolsMenu.add_command(label=APPLICATION, command=self._start_viewer)
         self._ui.toolsMenu.entryconfig(APPLICATION, state='disabled')
 
-    def _start_viewer(self):
-        if self._progress_viewer:
-            if self._progress_viewer.isOpen:
-                self._progress_viewer.lift()
-                self._progress_viewer.focus()
-                self._progress_viewer.build_tree()
-                return
-
-        self._progress_viewer = ProgressViewer(self, self._ui)
-        self._progress_viewer.title(f'{self._ui.novel.title} - {PLUGIN}')
-        set_icon(self._progress_viewer, icon='wLogo32', default=False)
+    def on_close(self):
+        """Close the window."""
+        self.on_quit()
 
     def on_quit(self):
         """Write back the configuration file."""
@@ -90,3 +82,16 @@ class Plugin:
             elif keyword in self.configuration.settings:
                 self.configuration.settings[keyword] = self.kwargs[keyword]
         self.configuration.write(self.iniFile)
+
+    def _start_viewer(self):
+        if self._progress_viewer:
+            if self._progress_viewer.isOpen:
+                self._progress_viewer.lift()
+                self._progress_viewer.focus()
+                self._progress_viewer.build_tree()
+                return
+
+        self._progress_viewer = ProgressViewer(self, self._ui)
+        self._progress_viewer.title(f'{self._ui.novel.title} - {PLUGIN}')
+        set_icon(self._progress_viewer, icon='wLogo32', default=False)
+

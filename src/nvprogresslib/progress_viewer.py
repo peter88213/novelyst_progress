@@ -54,12 +54,8 @@ class ProgressViewer(tk.Toplevel):
         self.isOpen = True
         self.build_tree()
 
-    def on_quit(self, event=None):
-        self._plugin.kwargs['window_geometry'] = self.winfo_geometry()
-        self.destroy()
-        self.isOpen = False
-
     def build_tree(self):
+        self.reset_tree()
         wcLog = {}
 
         # Copy the read-in word count log.
@@ -103,3 +99,14 @@ class ProgressViewer(tk.Toplevel):
             lastCount = countInt
             lastTotalCount = totalCountInt
             self.tree.insert('', 'end', iid=wc, values=columns, tags=nodeTags, open=True)
+
+    def on_quit(self, event=None):
+        self._plugin.kwargs['window_geometry'] = self.winfo_geometry()
+        self.destroy()
+        self.isOpen = False
+
+    def reset_tree(self):
+        """Clear the displayed tree."""
+        for child in self.tree.get_children(''):
+            self.tree.delete(child)
+
