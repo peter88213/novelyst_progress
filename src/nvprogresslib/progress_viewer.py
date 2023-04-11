@@ -30,7 +30,8 @@ class ProgressViewer(tk.Toplevel):
             'wordCount',
             'wordCountDelta',
             'totalWordCount',
-            'totalWordCountDelta'
+            'totalWordCountDelta',
+            'spacer',
             )
         self.tree = ttk.Treeview(self, selectmode='none', columns=columns)
         scrollY = ttk.Scrollbar(self.tree, orient=tk.VERTICAL, command=self.tree.yview)
@@ -43,11 +44,11 @@ class ProgressViewer(tk.Toplevel):
         self.tree.heading('totalWordCount', text=_('With unused'))
         self.tree.heading('totalWordCountDelta', text=_('Daily'))
         self.tree.column('#0', width=0)
-        self.tree.column('date', anchor=tk.CENTER, width=100)
-        self.tree.column('wordCount', anchor=tk.CENTER, width=100)
-        self.tree.column('wordCountDelta', anchor=tk.CENTER, width=100)
-        self.tree.column('totalWordCount', anchor=tk.CENTER, width=100)
-        self.tree.column('totalWordCountDelta', anchor=tk.CENTER, width=100)
+        self.tree.column('date', anchor=tk.CENTER, width=self._plugin.kwargs['date_width'], stretch=False)
+        self.tree.column('wordCount', anchor=tk.CENTER, width=self._plugin.kwargs['wordcount_width'], stretch=False)
+        self.tree.column('wordCountDelta', anchor=tk.CENTER, width=self._plugin.kwargs['wordcount_delta_width'], stretch=False)
+        self.tree.column('totalWordCount', anchor=tk.CENTER, width=self._plugin.kwargs['totalcount_width'], stretch=False)
+        self.tree.column('totalWordCountDelta', anchor=tk.CENTER, width=self._plugin.kwargs['totalcount_delta_width'], stretch=False)
 
         self.tree.tag_configure('positive', foreground='black')
         self.tree.tag_configure('negative', foreground='red')
@@ -102,6 +103,11 @@ class ProgressViewer(tk.Toplevel):
 
     def on_quit(self, event=None):
         self._plugin.kwargs['window_geometry'] = self.winfo_geometry()
+        self._plugin.kwargs['date_width'] = self.tree.column('date', 'width')
+        self._plugin.kwargs['wordcount_width'] = self.tree.column('wordCount', 'width')
+        self._plugin.kwargs['wordcount_delta_width'] = self.tree.column('wordCountDelta', 'width')
+        self._plugin.kwargs['totalcount_width'] = self.tree.column('totalWordCount', 'width')
+        self._plugin.kwargs['totalcount_delta_width'] = self.tree.column('totalWordCountDelta', 'width')
         self.destroy()
         self.isOpen = False
 

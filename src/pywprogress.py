@@ -7,6 +7,7 @@ import tkinter as tk
 from pywriter.pywriter_globals import *
 from pywriter.ui.main_tk import MainTk
 from novelyst_progress import Plugin
+from novelystlib.model.work_file import WorkFile
 
 APPLICATION = 'View daily progress log'
 
@@ -17,10 +18,9 @@ class ProgressTk(MainTk):
         kwargs = {
                 'root_geometry': '800x500',
                 'yw_last_open': '',
-                'color_text_bg':'white',
-                'color_text_fg':'black',
                 }
         super().__init__(APPLICATION, **kwargs)
+        self._YW_CLASS = WorkFile
         self.toolsMenu = tk.Menu(self.mainMenu, tearoff=0)
         self.mainMenu.add_cascade(label=_('Tools'), menu=self.toolsMenu)
         self.helpMenu = tk.Menu(self.mainMenu, tearoff=0)

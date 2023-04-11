@@ -15,6 +15,11 @@ from nvprogresslib.progress_viewer import ProgressViewer
 
 SETTINGS = dict(
     window_geometry='510x440',
+    date_width=100,
+    wordcount_width=100,
+    wordcount_delta_width=100,
+    totalcount_width=100,
+    totalcount_delta_width=100,
 )
 OPTIONS = {}
 

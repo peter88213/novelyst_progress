@@ -4,6 +4,13 @@
 
 ## Changelog
 
+### v0.2.2
+
+- Save/restore column widths.
+
+Based on PyWriter v12.3.2
+Compatibility: novelyst v4.18 API
+
 ### v0.2.1
 
 Bugfixes:
