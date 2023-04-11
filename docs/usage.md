@@ -22,6 +22,14 @@ The plugin adds a **Daily progress log** entry to the *novelyst* **Tools** menu.
 
 - Open the progress log viewer from the main menu: **Tools > Daily progress log**.
 
+---
+
+## Update today's word count
+
+
+- If the *novelyst_progress* window is already open, you can update the actual word count with **Tools > Daily progress log**.
+
+---
 
 ## Exit
 
