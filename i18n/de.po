@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.1.0\n"
-"POT-Creation-Date: 2023-04-11 13:34:57\n"
-"PO-Revision-Date: 2023-04-11 13:34:57\n"
+"POT-Creation-Date: 2023-04-11 14:57:33\n"
+"PO-Revision-Date: 2023-04-11 14:57:33\n"
 "Last-Translator: Peter Triesberger\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -13,6 +13,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 
+msgid "Daily"
+msgstr "Täglich"
+
 msgid "Daily progress log"
 msgstr "Täglicher Schreibfortschritt"
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "With unused"
+msgstr "Mit unbenutzten"
+
+msgid "Word count"
+msgstr "Wortzahl"
 

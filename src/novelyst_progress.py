@@ -70,6 +70,7 @@ class Plugin:
             if self._progress_viewer.isOpen:
                 self._progress_viewer.lift()
                 self._progress_viewer.focus()
+                self._progress_viewer.build_tree()
                 return
 
         self._progress_viewer = ProgressViewer(self, self._ui)
