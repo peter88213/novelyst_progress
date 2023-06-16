@@ -4,6 +4,13 @@
 
 ## Changelog
 
+### v1.1.0
+
+Based on PyWriter v12.13.2
+Compatibility: novelyst v4.18 API
+
+- Reverse the sort order: put the most recent entry at the top.
+
 ### v1.0.0
 
 Based on PyWriter v12.4.1

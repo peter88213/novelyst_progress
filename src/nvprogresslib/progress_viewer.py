@@ -99,7 +99,11 @@ class ProgressViewer(tk.Toplevel):
                 ]
             lastCount = countInt
             lastTotalCount = totalCountInt
-            self.tree.insert('', 'end', iid=wc, values=columns, tags=nodeTags, open=True)
+            # startIndex = 'end'
+            # chronological order
+            startIndex = '0'
+            # reverse order
+            self.tree.insert('', startIndex, iid=wc, values=columns, tags=nodeTags, open=True)
 
     def on_quit(self, event=None):
         self._plugin.kwargs['window_geometry'] = self.winfo_geometry()
