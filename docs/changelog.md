@@ -4,6 +4,13 @@
 
 ## Changelog
 
+### v1.1.1
+
+Based on PyWriter v12.13.6
+Compatibility: novelyst v4.18 API
+
+- Refactor the code for performance improvement.
+
 ### v1.1.0
 
 Based on PyWriter v12.13.2
