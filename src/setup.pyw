@@ -58,12 +58,16 @@ if __name__ == '__main__':
             output(f'ERROR: file "{PLUGIN}" not found.')
 
         # Install the localization files.
+        output(f'Copying locale ...')
         copytree('locale', f'{novelystDir}/locale', dirs_exist_ok=True)
-        output(f'Copying "locale"')
 
         # Install the icon files.
+        output(f'Copying icons ...')
         copytree('icons', f'{novelystDir}/icons', dirs_exist_ok=True)
-        output(f'Copying "icons"')
+        for f in os.listdir(f'{novelystDir}/icons'):
+            if not f.endswith('.png') and not f.endswith('.ico'):
+                output(f'Deleting {novelystDir}/icons/{f} ...')
+                os.remove(f'{novelystDir}/icons/{f}')
     else:
         output(f'ERROR: Cannot find a novelyst installation at "{novelystDir}"')
 
