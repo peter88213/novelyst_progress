@@ -31,7 +31,7 @@ The plugin adds a **Täglicher Schreibfortschritt** entry to the *novelyst* **Ex
 
 ---
 
-## Exit
+## Beenden
 
 - You can exit with **Ctrl-Q**, or just by closing the window.
 
