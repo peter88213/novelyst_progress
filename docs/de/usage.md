@@ -1,20 +1,20 @@
-[Project homepage](https://peter88213.github.io/novelyst_progress)
+[Projekt-Homepage](https://peter88213.github.io/novelyst_progress) > Gebrauchsanleitung
 
 --- 
 
-A [novelyst](https://peter88213.github.io/novelyst/) plugin providing a daily progress log viewer. 
+Ein [novelyst](https://peter88213.github.io/novelyst/)-Plugin providing a daily progress log viewer. 
 
 ---
 
 # Installation
 
-If [novelyst](https://peter88213.github.io/novelyst/) is installed, the setup script auto-installs the *novelyst_progress* plugin in the *novelyst* plugin directory.
+Wenn [novelyst](https://peter88213.github.io/novelyst/) installiert ist, installiert das Setup-Skript automatisch das*novelyst_progress*-Plugin im *novelyst* Plugin-Verzeichnis.
 
-The plugin adds a **Täglicher Schreibfortschritt** entry to the *novelyst* **Extras**-Menü. 
+Das Plugin hängt einen **Täglicher Schreibfortschritt**-Eintrag an das *novelyst* **Extras**-Menü an. 
 
 ---
 
-# Operation
+# Benutzung
 
 ---
 
@@ -37,8 +37,6 @@ The plugin adds a **Täglicher Schreibfortschritt** entry to the *novelyst* **Ex
 
 ---
 
-# License
+# Lizenz
 
-This is Open Source software, and the *novelyst_progress* plugin is licensed under GPLv3. See the
-[GNU General Public License website](https://www.gnu.org/licenses/gpl-3.0.en.html) for more
-details, or consult the [LICENSE](https://github.com/peter88213/novelyst_progress/blob/main/LICENSE) file.
+Dies ist quelloffene Software, und das *novelyst_progress*-Plugin steht unter der GPLv3-Lizenz. Für mehr Details besuchen Sie die[Website der GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.de.html), oder schauen Sie sich die [LICENSE](https://github.com/peter88213/novelyst_progress/blob/main/LICENSE)-Datei an.
