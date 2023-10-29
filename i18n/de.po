@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 2.0.0\n"
-"POT-Creation-Date: 2023-10-29 20:19:57\n"
-"PO-Revision-Date: 2023-10-29 20:19:57\n"
+"POT-Creation-Date: 2023-10-29 20:42:39\n"
+"PO-Revision-Date: 2023-10-29 20:42:39\n"
 "Last-Translator: Peter Triesberger\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -25,6 +25,6 @@ msgstr "Datum"
 msgid "With unused"
 msgstr "Mit unbenutzten"
 
-msgid "Word count"
+msgid "Words total"
 msgstr "Wortzahl"
 

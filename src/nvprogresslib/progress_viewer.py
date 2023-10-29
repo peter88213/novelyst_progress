@@ -39,7 +39,7 @@ class ProgressViewer(tk.Toplevel):
         scrollY.pack(side='right', fill='y')
         self.tree.pack(fill='both', expand=True)
         self.tree.heading('date', text=_('Date'))
-        self.tree.heading('wordCount', text=_('Word count'))
+        self.tree.heading('wordCount', text=_('Words total'))
         self.tree.heading('wordCountDelta', text=_('Daily'))
         self.tree.heading('totalWordCount', text=_('With unused'))
         self.tree.heading('totalWordCountDelta', text=_('Daily'))
