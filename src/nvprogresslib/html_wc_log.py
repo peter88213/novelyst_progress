@@ -7,7 +7,7 @@ License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 import os
 from urllib.parse import quote
 from string import Template
-from pywriter.pywriter_globals import *
+from novxlib.novx_globals import *
 
 
 class HtmlWcLog:

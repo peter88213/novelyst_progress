@@ -18,8 +18,8 @@ GNU General Public License for more details.
 import os
 from pathlib import Path
 import webbrowser
-from pywriter.config.configuration import Configuration
-from pywriter.ui.set_icon_tk import *
+from novxlib.config.configuration import Configuration
+from novxlib.ui.set_icon_tk import *
 from nvprogresslib.nvprogress_globals import *
 from nvprogresslib.progress_viewer import ProgressViewer
 
@@ -42,7 +42,7 @@ class Plugin:
         enable_menu() -- enable menu entries when a project is open.    
     """
     VERSION = '@release'
-    NOVELYST_API = '4.18'
+    NOVELYST_API = '5.0'
     DESCRIPTION = 'A daily progress log viewer'
     URL = 'https://peter88213.github.io/novelyst_progress'
 
@@ -66,7 +66,7 @@ class Plugin:
         #--- Load configuration.
         try:
             homeDir = str(Path.home()).replace('\\', '/')
-            configDir = f'{homeDir}/.pywriter/novelyst/config'
+            configDir = f'{homeDir}/.novelyst/config'
         except:
             configDir = '.'
         self.iniFile = f'{configDir}/progress.ini'
