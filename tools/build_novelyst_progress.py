@@ -24,7 +24,7 @@ TARGET_FILE = f'{BUILD}novelyst_progress.py'
 def main():
     inliner.run(SOURCE_FILE, TARGET_FILE, 'nvprogresslib', '../../novelyst_progress/src/')
     inliner.run(TARGET_FILE, TARGET_FILE, 'novelystlib', '../../novelyst/src/')
-    inliner.run(TARGET_FILE, TARGET_FILE, 'novxlib', '../../novxlib/src/')
+    inliner.run(TARGET_FILE, TARGET_FILE, 'novxlib-Alpha', '../../novxlib/src/')
     print('Done.')
 
 
