@@ -1,5 +1,5 @@
 /build/
 /test/yw7/
-/test/noveltree_progress.py
+/test/nv_progress.py
 *.pyc
 *.bak

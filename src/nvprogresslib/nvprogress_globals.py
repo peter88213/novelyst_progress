@@ -1,7 +1,7 @@
 """Provide global variables and functions.
 
 Copyright (c) 2023 Peter Triesberger
-For further information see https://github.com/peter88213/nv_collection
+For further information see https://github.com/peter88213/nv_progress
 License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
 import os
@@ -31,7 +31,7 @@ except:
     # Fallback for old Windows versions.
     CURRENT_LANGUAGE = locale.getdefaultlocale()[0][:2]
 try:
-    t = gettext.translation('noveltree_progress', LOCALE_PATH, languages=[CURRENT_LANGUAGE])
+    t = gettext.translation('nv_progress', LOCALE_PATH, languages=[CURRENT_LANGUAGE])
     _ = t.gettext
 except:
 

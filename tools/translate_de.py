@@ -14,24 +14,20 @@ File structure:
 │   └── src/
 │       ├── translations.py
 │       └── msgfmt.py
-└── noveltree_progress/
+└── nv_progress/
     ├── src/ 
     ├── tools/ 
     │   └── translate_de.py
     └── i18n/
         ├── messages.pot
         ├── de.po
-        ├── locale/
-        │   └─ de/
-        │      └─ LC_MESSAGES/
-        │         └─ novxlib.mo
-        └── plugin_locale/
+        └── locale/
             └─ de/
                └─ LC_MESSAGES/
-                  └─ noveltree_progress.mo
+                  └─ nv_progress.mo
     
 Copyright (c) 2023 Peter Triesberger
-For further information see https://github.com/peter88213/noveltree_progress
+For further information see https://github.com/peter88213/nv_progress
 License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
 import os
