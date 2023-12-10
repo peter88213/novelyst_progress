@@ -1,4 +1,4 @@
-"""A test application for the novelyst_progress plugin.
+"""A test application for the noveltree_progress plugin.
 
 For further information see https://github.com/peter88213/noveltree_progress
 License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
@@ -6,7 +6,7 @@ License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 import tkinter as tk
 from novxlib.novxlib_globals import *
 from novxlib.ui.main_tk import MainTk
-from novelyst_progress import Plugin
+from noveltree_progress import Plugin
 from noveltreelib.model.work_file import WorkFile
 
 APPLICATION = 'View daily progress log'

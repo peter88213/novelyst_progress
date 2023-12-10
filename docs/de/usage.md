@@ -1,16 +1,16 @@
-[Projekt-Homepage](https://peter88213.github.io/novelyst_progress) > Gebrauchsanleitung
+[Projekt-Homepage](https://peter88213.github.io/noveltree_progress) > Gebrauchsanleitung
 
 --- 
 
-Ein [novelyst](https://peter88213.github.io/novelyst/)-Plugin providing a daily progress log viewer. 
+Ein [noveltree](https://peter88213.github.io/noveltree/)-Plugin providing a daily progress log viewer. 
 
 ---
 
 # Installation
 
-Wenn [novelyst](https://peter88213.github.io/novelyst/) installiert ist, installiert das Setup-Skript automatisch das*novelyst_progress*-Plugin im *novelyst* Plugin-Verzeichnis.
+Wenn [noveltree](https://peter88213.github.io/noveltree/) installiert ist, installiert das Setup-Skript automatisch das*noveltree_progress*-Plugin im *noveltree* Plugin-Verzeichnis.
 
-Das Plugin hängt einen **Täglicher Schreibfortschritt**-Eintrag an das *novelyst* **Extras**-Menü an. 
+Das Plugin hängt einen **Täglicher Schreibfortschritt**-Eintrag an das *noveltree* **Extras**-Menü an. 
 
 ---
 
@@ -27,7 +27,7 @@ Das Plugin hängt einen **Täglicher Schreibfortschritt**-Eintrag an das *novely
 ## Update today's word count
 
 
-- If the *novelyst_progress* window is already open, you can update the actual word count with **Extras > Täglicher Schreibfortschritt**.
+- If the *noveltree_progress* window is already open, you can update the actual word count with **Extras > Täglicher Schreibfortschritt**.
 
 ---
 
@@ -39,4 +39,4 @@ Das Plugin hängt einen **Täglicher Schreibfortschritt**-Eintrag an das *novely
 
 # Lizenz
 
-Dies ist quelloffene Software, und das *novelyst_progress*-Plugin steht unter der GPLv3-Lizenz. Für mehr Details besuchen Sie die[Website der GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.de.html), oder schauen Sie sich die [LICENSE](https://github.com/peter88213/noveltree_progress/blob/main/LICENSE)-Datei an.
+Dies ist quelloffene Software, und das *noveltree_progress*-Plugin steht unter der GPLv3-Lizenz. Für mehr Details besuchen Sie die[Website der GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.de.html), oder schauen Sie sich die [LICENSE](https://github.com/peter88213/noveltree_progress/blob/main/LICENSE)-Datei an.

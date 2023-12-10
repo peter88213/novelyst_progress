@@ -1,4 +1,4 @@
-"""A daily progress log viewer plugin for novelyst.
+"""A daily progress log viewer plugin for noveltree.
 
 Requires Python 3.6+
 Copyright (c) 2023 Peter Triesberger
@@ -35,7 +35,7 @@ OPTIONS = {}
 
 
 class Plugin:
-    """novelyst daily progress log viewer plugin class.
+    """noveltree daily progress log viewer plugin class.
     
     Public methods:
         disable_menu() -- disable menu entries when no project is open.
@@ -44,7 +44,7 @@ class Plugin:
     VERSION = '@release'
     NOVELYST_API = '5.0'
     DESCRIPTION = 'A daily progress log viewer'
-    URL = 'https://peter88213.github.io/novelyst_progress'
+    URL = 'https://peter88213.github.io/noveltree_progress'
 
     def disable_menu(self):
         """Disable menu entries when no project is open."""
@@ -66,7 +66,7 @@ class Plugin:
         #--- Load configuration.
         try:
             homeDir = str(Path.home()).replace('\\', '/')
-            configDir = f'{homeDir}/.novelyst/config'
+            configDir = f'{homeDir}/.noveltree/config'
         except:
             configDir = '.'
         self.iniFile = f'{configDir}/progress.ini'

@@ -1,10 +1,10 @@
-"""Build a collection novelyst plugin.
+"""Build a collection noveltree plugin.
         
 In order to distribute a single script without dependencies, 
 this script "inlines" all modules imported from the novxlib package.
 
 The novxlib project (see https://github.com/peter88213/novxlib)
-must be located on the same directory level as the novelyst_progress project. 
+must be located on the same directory level as the noveltree_progress project. 
 
 Copyright (c) 2023 Peter Triesberger
 For further information see https://github.com/peter88213/noveltree_progress
@@ -17,13 +17,13 @@ import inliner
 
 SRC = '../src/'
 BUILD = '../test/'
-SOURCE_FILE = f'{SRC}novelyst_progress.py'
-TARGET_FILE = f'{BUILD}novelyst_progress.py'
+SOURCE_FILE = f'{SRC}nv_progress.py'
+TARGET_FILE = f'{BUILD}noveltree_progress.py'
 
 
 def main():
     inliner.run(SOURCE_FILE, TARGET_FILE, 'nvprogresslib', '../../novelyst_progress/src/')
-    inliner.run(TARGET_FILE, TARGET_FILE, 'novelystlib', '../../novelyst/src/')
+    inliner.run(TARGET_FILE, TARGET_FILE, 'noveltreelib', '../../noveltree/src/')
     inliner.run(TARGET_FILE, TARGET_FILE, 'novxlib-Alpha', '../../novxlib-Alpha/src/')
     print('Done.')
 

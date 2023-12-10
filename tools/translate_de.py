@@ -14,7 +14,7 @@ File structure:
 │   └── src/
 │       ├── translations.py
 │       └── msgfmt.py
-└── novelyst_progress/
+└── noveltree_progress/
     ├── src/ 
     ├── tools/ 
     │   └── translate_de.py
@@ -28,7 +28,7 @@ File structure:
         └── plugin_locale/
             └─ de/
                └─ LC_MESSAGES/
-                  └─ novelyst_progress.mo
+                  └─ noveltree_progress.mo
     
 Copyright (c) 2023 Peter Triesberger
 For further information see https://github.com/peter88213/noveltree_progress
@@ -41,7 +41,7 @@ import translations
 from shutil import copyfile
 import msgfmt
 
-APP_NAME = 'novelyst_progress'
+APP_NAME = 'nv_progress'
 PO_PATH = '../i18n/de.po'
 MO_PATH = f'../i18n/locale/de/LC_MESSAGES/{APP_NAME}.mo'
 MO_COPY = f'../../kalliope/src/locale/de/LC_MESSAGES/{APP_NAME}.mo'

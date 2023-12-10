@@ -1,16 +1,16 @@
-[Project homepage](https://peter88213.github.io/novelyst_progress) > Instructions for use
+[Project homepage](https://peter88213.github.io/noveltree_progress) > Instructions for use
 
 --- 
 
-A [novelyst](https://peter88213.github.io/novelyst/) plugin providing a daily progress log viewer. 
+A [noveltree](https://peter88213.github.io/noveltree/) plugin providing a daily progress log viewer. 
 
 ---
 
 # Installation
 
-If [novelyst](https://peter88213.github.io/novelyst/) is installed, the setup script auto-installs the *novelyst_progress* plugin in the *novelyst* plugin directory.
+If [noveltree](https://peter88213.github.io/noveltree/) is installed, the setup script auto-installs the *noveltree_progress* plugin in the *noveltree* plugin directory.
 
-The plugin adds a **Daily progress log** entry to the *novelyst* **Tools** menu. 
+The plugin adds a **Daily progress log** entry to the *noveltree* **Tools** menu. 
 
 ---
 
@@ -27,7 +27,7 @@ The plugin adds a **Daily progress log** entry to the *novelyst* **Tools** menu.
 ## Update today's word count
 
 
-- If the *novelyst_progress* window is already open, you can update the actual word count with **Tools > Daily progress log**.
+- If the *noveltree_progress* window is already open, you can update the actual word count with **Tools > Daily progress log**.
 
 ---
 
@@ -39,6 +39,6 @@ The plugin adds a **Daily progress log** entry to the *novelyst* **Tools** menu.
 
 # License
 
-This is Open Source software, and the *novelyst_progress* plugin is licensed under GPLv3. See the
+This is Open Source software, and the *noveltree_progress* plugin is licensed under GPLv3. See the
 [GNU General Public License website](https://www.gnu.org/licenses/gpl-3.0.en.html) for more
 details, or consult the [LICENSE](https://github.com/peter88213/noveltree_progress/blob/main/LICENSE) file.
