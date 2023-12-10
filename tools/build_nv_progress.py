@@ -18,13 +18,13 @@ import inliner
 SRC = '../src/'
 BUILD = '../test/'
 SOURCE_FILE = f'{SRC}nv_progress.py'
-TARGET_FILE = f'{BUILD}noveltree_progress.py'
+TARGET_FILE = f'{BUILD}nv_progress.py'
 
 
 def main():
     inliner.run(SOURCE_FILE, TARGET_FILE, 'nvprogresslib', '../../novelyst_progress/src/')
     inliner.run(TARGET_FILE, TARGET_FILE, 'noveltreelib', '../../noveltree/src/')
-    inliner.run(TARGET_FILE, TARGET_FILE, 'novxlib-Alpha', '../../novxlib-Alpha/src/')
+    inliner.run(TARGET_FILE, TARGET_FILE, 'novxlib', '../../novxlib-Alpha/src/')
     print('Done.')
 
 
