@@ -58,7 +58,7 @@ class Plugin:
         """Add a submenu to the 'Tools' menu.
         
         Positional arguments:
-            ui -- reference to the NovelystTk instance of the application.
+            ui -- reference to the NoveltreeUi instance of the application.
         """
         self._ui = ui
         self._progress_viewer = None
