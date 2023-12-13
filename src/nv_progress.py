@@ -42,7 +42,7 @@ class Plugin:
         enable_menu() -- enable menu entries when a project is open.    
     """
     VERSION = '@release'
-    NOVELYST_API = '0.1'
+    NOVELYST_API = '0.2'
     DESCRIPTION = 'A daily progress log viewer'
     URL = 'https://peter88213.github.io/nv_progress'
 

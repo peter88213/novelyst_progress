@@ -60,15 +60,15 @@ class ProgressViewer(tk.Toplevel):
         wcLog = {}
 
         # Copy the read-in word count log.
-        for wcDate in self._ui.prjFile.wcLog:
-            wcLog[wcDate] = self._ui.prjFile.wcLog[wcDate]
+        for wcDate in self._ui.model.wcLog:
+            wcLog[wcDate] = self._ui.model.wcLog[wcDate]
 
         # Add the word count determined when opening the project.
-        for wcDate in self._ui.prjFile.wcLogUpdate:
-            wcLog[wcDate] = self._ui.prjFile.wcLogUpdate[wcDate]
+        for wcDate in self._ui.model.wcLogUpdate:
+            wcLog[wcDate] = self._ui.model.wcLogUpdate[wcDate]
 
         # Add the actual word count.
-        newCountInt, newTotalCountInt = self._ui.prjFile.count_words()
+        newCountInt, newTotalCountInt = self._ui.model.count_words()
         newCount = str(newCountInt)
         newTotalCount = str(newTotalCountInt)
         today = date.today().isoformat()
