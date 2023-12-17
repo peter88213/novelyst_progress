@@ -14,8 +14,8 @@ from nvprogresslib.nvprogress_globals import *
 class ProgressViewer(tk.Toplevel):
     _KEY_QUIT_PROGRAM = ('<Control-q>', 'Ctrl-Q')
 
-    def __init__(self, plugin, ui):
-        self._ui = ui
+    def __init__(self, plugin, controller):
+        self._controller = controller
         self._plugin = plugin
         super().__init__()
 
@@ -60,15 +60,15 @@ class ProgressViewer(tk.Toplevel):
         wcLog = {}
 
         # Copy the read-in word count log.
-        for wcDate in self._ui.model.wcLog:
-            wcLog[wcDate] = self._ui.model.wcLog[wcDate]
+        for wcDate in self._controller.model.wcLog:
+            wcLog[wcDate] = self._controller.model.wcLog[wcDate]
 
         # Add the word count determined when opening the project.
-        for wcDate in self._ui.model.wcLogUpdate:
-            wcLog[wcDate] = self._ui.model.wcLogUpdate[wcDate]
+        for wcDate in self._controller.model.wcLogUpdate:
+            wcLog[wcDate] = self._controller.model.wcLogUpdate[wcDate]
 
         # Add the actual word count.
-        newCountInt, newTotalCountInt = self._ui.model.count_words()
+        newCountInt, newTotalCountInt = self._controller.model.count_words()
         newCount = str(newCountInt)
         newTotalCount = str(newTotalCountInt)
         today = date.today().isoformat()

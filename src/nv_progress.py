@@ -35,14 +35,9 @@ OPTIONS = {}
 
 
 class Plugin:
-    """noveltree daily progress log viewer plugin class.
-    
-    Public methods:
-        disable_menu() -- disable menu entries when no project is open.
-        enable_menu() -- enable menu entries when a project is open.    
-    """
+    """noveltree daily progress log viewer plugin class."""
     VERSION = '@release'
-    NOVELYST_API = '0.2'
+    NOVELYST_API = '0.6'
     DESCRIPTION = 'A daily progress log viewer'
     URL = 'https://peter88213.github.io/nv_progress'
 
@@ -54,12 +49,14 @@ class Plugin:
         """Enable menu entries when a project is open."""
         self._ui.toolsMenu.entryconfig(APPLICATION, state='normal')
 
-    def install(self, ui):
+    def install(self, controller, ui):
         """Add a submenu to the 'Tools' menu.
         
         Positional arguments:
-            ui -- reference to the NoveltreeUi instance of the application.
+            controller -- reference to the main controller instance of the application.
+            ui -- reference to the main view instance of the application.
         """
+        self._controller = controller
         self._ui = ui
         self._progress_viewer = None
 
@@ -106,7 +103,7 @@ class Plugin:
                 self._progress_viewer.build_tree()
                 return
 
-        self._progress_viewer = ProgressViewer(self, self._ui)
-        self._progress_viewer.title(f'{self._ui.novel.title} - {PLUGIN}')
+        self._progress_viewer = ProgressViewer(self, self._controller)
+        self._progress_viewer.title(f'{self._controller.novel.title} - {PLUGIN}')
         set_icon(self._progress_viewer, icon='wLogo32', default=False)
 
