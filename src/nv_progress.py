@@ -19,6 +19,7 @@ from pathlib import Path
 
 from novxlib.config.configuration import Configuration
 from novxlib.ui.set_icon_tk import set_icon
+from nvprogresslib.nvprogress_globals import _
 from nvprogresslib.progress_viewer import ProgressViewer
 
 APPLICATION = _('Daily progress log')
@@ -50,14 +51,14 @@ class Plugin:
         """Enable menu entries when a project is open."""
         self._ui.toolsMenu.entryconfig(APPLICATION, state='normal')
 
-    def install(self, controller, ui, prefs):
+    def install(self, model, ui, controller, prefs):
         """Add a submenu to the 'Tools' menu.
         
         Positional arguments:
             controller -- reference to the main controller instance of the application.
             ui -- reference to the main view instance of the application.
         """
-        self._controller = controller
+        self._model = model
         self._ui = ui
         self._progress_viewer = None
 
@@ -104,7 +105,7 @@ class Plugin:
                 self._progress_viewer.build_tree()
                 return
 
-        self._progress_viewer = ProgressViewer(self, self._controller)
-        self._progress_viewer.title(f'{self._controller.novel.title} - {PLUGIN}')
+        self._progress_viewer = ProgressViewer(self, self._model)
+        self._progress_viewer.title(f'{self._model.novel.title} - {PLUGIN}')
         set_icon(self._progress_viewer, icon='wLogo32', default=False)
 

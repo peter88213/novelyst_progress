@@ -11,30 +11,16 @@ import os
 import sys
 from tkinter import ttk
 
+from nvprogresslib.nvprogress_globals import _
 import tkinter as tk
-
-# Initialize localization.
-LOCALE_PATH = f'{os.path.dirname(sys.argv[0])}/locale/'
-try:
-    CURRENT_LANGUAGE = locale.getlocale()[0][:2]
-except:
-    # Fallback for old Windows versions.
-    CURRENT_LANGUAGE = locale.getdefaultlocale()[0][:2]
-try:
-    t = gettext.translation('nv_progress', LOCALE_PATH, languages=[CURRENT_LANGUAGE])
-    _ = t.gettext
-except:
-
-    def _(message):
-        return message
 
 
 class ProgressViewer(tk.Toplevel):
     _KEY_QUIT_PROGRAM = ('<Control-q>', 'Ctrl-Q')
 
-    def __init__(self, plugin, controller):
-        self._controller = controller
+    def __init__(self, plugin, model):
         self._plugin = plugin
+        self._model = model
         super().__init__()
 
         self.geometry(self._plugin.kwargs['window_geometry'])
@@ -78,15 +64,15 @@ class ProgressViewer(tk.Toplevel):
         wcLog = {}
 
         # Copy the read-in word count log.
-        for wcDate in self._controller.model.wcLog:
-            wcLog[wcDate] = self._controller.model.wcLog[wcDate]
+        for wcDate in self._model.prjFile.wcLog:
+            wcLog[wcDate] = self._model.prjFile.wcLog[wcDate]
 
         # Add the word count determined when opening the project.
-        for wcDate in self._controller.model.wcLogUpdate:
-            wcLog[wcDate] = self._controller.model.wcLogUpdate[wcDate]
+        for wcDate in self._model.prjFile.wcLogUpdate:
+            wcLog[wcDate] = self._model.prjFile.wcLogUpdate[wcDate]
 
         # Add the actual word count.
-        newCountInt, newTotalCountInt = self._controller.model.count_words()
+        newCountInt, newTotalCountInt = self._model.prjFile.count_words()
         newCount = str(newCountInt)
         newTotalCount = str(newTotalCountInt)
         today = date.today().isoformat()
