@@ -7,7 +7,7 @@ import tkinter as tk
 from novxlib.novxlib_globals import *
 from novxlib.ui.main_tk import MainTk
 from nv_progress import Plugin
-from noveltreelib.model.work_file import WorkFile
+from noveltreelib.model.nv_work_file import NvWorkFile
 
 APPLICATION = 'View daily progress log'
 
@@ -20,7 +20,7 @@ class ProgressTk(MainTk):
                 'last_open': '',
                 }
         super().__init__(APPLICATION, **kwargs)
-        self._YW_CLASS = WorkFile
+        self._YW_CLASS = NvWorkFile
         self.toolsMenu = tk.Menu(self.mainMenu, tearoff=0)
         self.mainMenu.add_cascade(label=_('Tools'), menu=self.toolsMenu)
         self.helpMenu = tk.Menu(self.mainMenu, tearoff=0)

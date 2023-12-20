@@ -15,13 +15,14 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 """
-import os
 from pathlib import Path
-import webbrowser
+
 from novxlib.config.configuration import Configuration
-from novxlib.ui.set_icon_tk import *
-from nvprogresslib.nvprogress_globals import *
+from novxlib.ui.set_icon_tk import set_icon
 from nvprogresslib.progress_viewer import ProgressViewer
+
+APPLICATION = _('Daily progress log')
+PLUGIN = f'{APPLICATION} plugin v@release'
 
 SETTINGS = dict(
     window_geometry='510x440',
@@ -49,7 +50,7 @@ class Plugin:
         """Enable menu entries when a project is open."""
         self._ui.toolsMenu.entryconfig(APPLICATION, state='normal')
 
-    def install(self, controller, ui):
+    def install(self, controller, ui, prefs):
         """Add a submenu to the 'Tools' menu.
         
         Positional arguments:

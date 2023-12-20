@@ -4,11 +4,29 @@ Copyright (c) 2024 Peter Triesberger
 For further information see https://github.com/peter88213/nv_progress
 License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
-import os
 from datetime import date
-import tkinter as tk
+import gettext
+import locale
+import os
+import sys
 from tkinter import ttk
-from nvprogresslib.nvprogress_globals import *
+
+import tkinter as tk
+
+# Initialize localization.
+LOCALE_PATH = f'{os.path.dirname(sys.argv[0])}/locale/'
+try:
+    CURRENT_LANGUAGE = locale.getlocale()[0][:2]
+except:
+    # Fallback for old Windows versions.
+    CURRENT_LANGUAGE = locale.getdefaultlocale()[0][:2]
+try:
+    t = gettext.translation('nv_progress', LOCALE_PATH, languages=[CURRENT_LANGUAGE])
+    _ = t.gettext
+except:
+
+    def _(message):
+        return message
 
 
 class ProgressViewer(tk.Toplevel):
