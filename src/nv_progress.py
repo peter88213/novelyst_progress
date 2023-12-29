@@ -58,7 +58,7 @@ class Plugin:
             controller -- reference to the main controller instance of the application.
             ui -- reference to the main view instance of the application.
         """
-        self._model = model
+        self._mdl = model
         self._ui = ui
         self._progress_viewer = None
 
@@ -105,7 +105,7 @@ class Plugin:
                 self._progress_viewer.build_tree()
                 return
 
-        self._progress_viewer = ProgressViewer(self, self._model)
-        self._progress_viewer.title(f'{self._model.novel.title} - {PLUGIN}')
+        self._progress_viewer = ProgressViewer(self, self._mdl)
+        self._progress_viewer.title(f'{self._mdl.novel.title} - {PLUGIN}')
         set_icon(self._progress_viewer, icon='wLogo32', default=False)
 
