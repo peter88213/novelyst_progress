@@ -51,15 +51,15 @@ class Plugin:
         """Enable menu entries when a project is open."""
         self._ui.toolsMenu.entryconfig(APPLICATION, state='normal')
 
-    def install(self, model, ui, controller, prefs):
+    def install(self, model, view, controller, prefs):
         """Add a submenu to the 'Tools' menu.
         
         Positional arguments:
             controller -- reference to the main controller instance of the application.
-            ui -- reference to the main view instance of the application.
+            view -- reference to the main view instance of the application.
         """
         self._mdl = model
-        self._ui = ui
+        self._ui = view
         self._progress_viewer = None
 
         #--- Load configuration.
