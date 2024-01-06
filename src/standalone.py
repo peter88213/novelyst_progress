@@ -1,6 +1,6 @@
 """A test application for the nv_progress plugin.
 
-For further information see https://github.com/peter88213/nv_progress
+For further information see https://github.com/peter88213/noveltree_progress
 License: GNU GPLv3 (https://www.gnu.org/licenses/gpl-3.0.en.html)
 """
 import tkinter as tk
