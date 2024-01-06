@@ -58,16 +58,15 @@ Name the binary file **nv_progress.mo**.
 
 ### Install your translation for testing
 
-Add a subdirectory tree to **noveltree/locale**, and place *nv_progress.mo* there, like this:
+Add a subdirectory tree to **~/.noveltree/locale**, and place *nv_progress.mo* there, like this:
 
 ```
 <your home directory>
-└── .novxlib/
-    └── noveltree/
-        └── locale/
-            └─ <language code>/
-               └─ LC_MESSAGES/
-                  └─ nv_progress.mo
+└── .noveltree/
+    └── locale/
+        └─ <language code>/
+           └─ LC_MESSAGES/
+              └─ nv_progress.mo
 ```
 
 Then start *noveltree* and see whether your translation works. 
