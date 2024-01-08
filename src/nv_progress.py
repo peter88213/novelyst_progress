@@ -39,7 +39,7 @@ OPTIONS = {}
 class Plugin:
     """noveltree daily progress log viewer plugin class."""
     VERSION = '@release'
-    NOVELYST_API = '0.7'
+    NOVELYST_API = '1.0'
     DESCRIPTION = 'A daily progress log viewer'
     URL = 'https://peter88213.github.io/noveltree_progress'
 
